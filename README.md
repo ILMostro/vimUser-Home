@@ -3,6 +3,7 @@ vimUser-Home
 This repo holds various snippets, templates, and other configuration options for VIM-7.2+,
 which I prefer to keep in the user's home directory under `/home/user/.vim/`
 
+        **Templates**
 The templates folder holds language-specific template files which all
 have the ".tpl" file extension. Their contents are inserted into a
 newly-created page with the various language-specific file extensions,
@@ -17,7 +18,7 @@ You are free to create templates
 for any programming language as long as they adhere to the above-mentioned
 naming standards.
 
-**IMPORTANT**
+*IMPORTANT*
 Those "templates" need to be sourced in user's '.vimrc' file as such:
 
     autocmd BufNewFile * silent! 0r $HOME/.vim/templates/%:e.tpl
@@ -41,7 +42,7 @@ Alternatively, you can leave out the `au FileType html` part of the
 keymapping to apply it to all filetypes (as long as you put placeholders between <+ +> tags);
 or, you can just append more filetypes in a comma-separated list: html,java,c,...etc.
 
-
+        **Key-mapping**
 Furthermore, the shortcut key-mappings are all stored in the confDotvim/mappings.vim file.
 Once again, they are sourced in the '.vimrc' file as such:
     
@@ -52,16 +53,15 @@ Also, the abbreviations.vim file holds, tadaa! abbreviations, what else.
 Set them in INSERT mod (iabbr) commandline-mode (cabbr)
   Find more info about abbreviations in VIM at the following link
   as well as the other listed links at the bottom of that page:
+  http://vim.wikia.com/wiki/Using_abbreviations
   
-    http://vim.wikia.com/wiki/Using_abbreviations
-  
-
+        *install-plugins Script*
 Lastly, the addplugins.sh file is a copied/customized/edited version of
 one included in sontek's github/dotfiles repo.  It's referenced in his
 tutorial on using VIM for coding in Python; it's available
 at the following link:
+http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
+    
+    
 
-    http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
-    
-    
-    MORE TO COME...
+MORE TO COME...
