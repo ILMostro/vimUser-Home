@@ -34,6 +34,7 @@ placeholders enclosed with the "<+ +>" tags. (NOTE: no Quotation Marks)
     au FileType html nnoremap <c-k> /<+.\{-1,}+><cr>c/+>/e<cr>
     
 This will ensure that the mapping works in INSERT mode as well:
+
     au FileType html inoremap <c-k> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
 
 Alternatively, you can leave out the `au FileType html` part of the
@@ -44,20 +45,22 @@ or, you can just append more filetypes in a comma-separated list: html,java,c,..
 Furthermore, the shortcut key-mappings are all stored in the confDotvim/mappings.vim file.
 Once again, they are sourced in the '.vimrc' file as such:
     
-    source /home/user/.vim/confDotvim/mappings.vim
+    `source /home/user/.vim/confDotvim/mappings.vim`
     
 
 Also, the abbreviations.vim file holds, tadaa! abbreviations, what else.
 Set them in INSERT mod (iabbr) commandline-mode (cabbr)
   Find more info about abbreviations in VIM at the following link
   as well as the other listed links at the bottom of that page:
-  http://vim.wikia.com/wiki/Using_abbreviations
+  
+    http://vim.wikia.com/wiki/Using_abbreviations
   
 
 Lastly, the addplugins.sh file is a copied/customized/edited version of
 one included in sontek's github/dotfiles repo.  It's referenced in his
 tutorial on using VIM for coding in Python; it's available
 at the following link:
+
     http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
     
     
