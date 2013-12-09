@@ -1,10 +1,23 @@
 vimUser-Home
 ============
-This repo holds various snippets, templates, and other configuration options for VIM-7.2+,
-which I prefer to keep in the user's home directory under `/home/user/.vim/`
+This repo holds various snippets, templates, and other configuration options
+for VIM-7.2+, which I prefer to keep in the user's home directory under
+  `/home/user/.vim/`
+I'd like to point out that this README file has become a Notepad of
+sorts to mark, copy, paraphrase, and expand on the bits and pieces
+of particular interest from the book
+[Hacking Vim](http://www.packtpub.com/hacking-vim-cookbook-get-most-out-latest-vim-editor/book)
+by Kim Schulz. It's the best source of
+valuable advice in a concise and functional writing style.
+Though, it's not the only source of information upon which this
+site is based, it *is* the most useful to me; both in its scope
+about the seemingly limitless power of vim as well as in its
+functional writing style, which tames it long enough for the reader
+to understand it and, perhaps, adapt it to his/her own workflow.
+
 **Templates**
 -------------
-The templates folder holds language-specific template files which all
+The [templates folder] holds language-specific template files which all
 have the ".tpl" file extension. Their contents are inserted into a
 newly-created page with the various language-specific file extensions,
 i.e. `html.tpl`, `java.tpl`, `c.tpl`, etc.
@@ -15,7 +28,6 @@ with newly-created files, not with existing files** which already contain
 their own lines of code/text.
 You are free to create templates for any programming language as long
 as they adhere to the above-mentioned naming standards.
-
 *IMPORTANT:*
 Those "templates" need to be sourced in user's `.vimrc` file like so:
 
@@ -37,8 +49,15 @@ This will ensure that the mapping works in INSERT mode as well:
     au FileType html inoremap <c-k> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
 
 Alternatively, you can leave out the `au FileType html` part of the
-keymapping to apply it to all filetypes (as long as you put placeholders between `<+ +>` tags);
-or, you can just append more filetypes in a comma-separated list: `html,java,c`,...etc.
+keymapping to apply it to all filetypes (as long as you put placeholders
+between `<+ +>` tags); or, you can just append more filetypes in a
+comma-separated list: `html,java,c`,...etc.
+
+  -*Abbreviations as Templates*-
+In order to expedite the workflow when coding, we can use the Abbreviations
+method to, essentially create templates on a smaller scale: i.e. by creating
+a `html.patterns.tpl` file in our [templates] directory, we can for patterns
+instead of just for FileTypes.
 
 **Key-mapping**
 ---------------
