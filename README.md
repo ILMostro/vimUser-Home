@@ -12,7 +12,7 @@ valuable advice in a concise and functional writing style.
 Though, it's not the only source of information upon which this
 site is based, it *is* the most useful to me; both in its scope
 about the seemingly limitless power of vim as well as in its
-functional writing style, which tames it long enough for the reader
+functional writing style, which tames vim long enough for the reader
 to understand it and, perhaps, adapt it to his/her own workflow.
 
 **Templates**
