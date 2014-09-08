@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+if
+  [ ! -d $1 ]; then
+  exec mkdir -p $HOME/.vim/{autoload,bundle}
+fi
+
 ## git submodule update --init --recursive
 ## git submodule foreach --recursive git pull origin master
 ## -----------------------------------------------
