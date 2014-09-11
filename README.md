@@ -1,3 +1,17 @@
+***Updated Script***
+execute
+
+    git clone https://github.com/ILMostro/vimUser-Home.git
+    cd vimUser-Home/
+    ./addplugins.sh
+
+to download this repo into the current directory; by executing
+the `addplugins.sh` script, 
+-the `vimUser-Home` folder is populated with the `pathogen` plugin for `vim`, 
+-the `bundle` directory is created, 
+-and the list of chosen vim-plugins are initialized as
+submodules in the `bundle` directory.
+
 vimUser-Home
 ============
 This repo holds various snippets, templates, and other configuration options
