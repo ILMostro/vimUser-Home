@@ -11,9 +11,9 @@ execute
 to download this repo into the current directory; by executing
 the `addplugins.sh` script, 
 
-    -the `vimUser-Home` folder is populated with the `pathogen` plugin for `vim`, 
-    -the `bundle` directory is created, 
-    -and the list of chosen vim-plugins are initialized as submodules in the `bundle` directory.
+- the `vimUser-Home` folder is populated with the `pathogen` plugin for `vim`, 
+- the `bundle` directory is created, 
+- and the list of chosen vim-plugins are initialized as submodules in the `bundle` directory.
 
 vimUser-Home
 ============
