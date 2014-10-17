@@ -124,3 +124,12 @@ au FileType html,java nnoremap <c-k> /<+.\{-1,}+><cr>c/+>/e<cr>
 au FileType html,java inoremap <c-k> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
 " au FileType html map <c-k> /<+.\{-1,}+><cr>c/+>/e<cr> 
 
+inoremap jj <Esc>
+nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
+" Highlight the current line
+hi CursorLine term=bold cterm=bold ctermbg=Cyan
+" Toggle highlighting on/off with \c
+nnoremap <Leader>c :set cursorline!<CR>
+" Pressing SPACE clears search highlighting and any message already displayed
+
+
