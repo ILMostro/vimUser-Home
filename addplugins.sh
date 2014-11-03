@@ -14,7 +14,7 @@ git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/tpope/vim-git.git bundle/git
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
-#git submodule add https://github.com/sontek/minibufexpl.vim.git bundle/minibufexpl
+git submodule add https://github.com/fholgado/minibufexpl.vim.git bundle/minibufexpl
 git submodule add https://github.com/wincent/Command-T.git bundle/command-t
 git submodule add https://github.com/mitechie/pyflakes-pathogen.git
 git submodule add https://github.com/mileszs/ack.vim.git bundle/ack
@@ -24,7 +24,7 @@ git submodule add https://github.com/vim-scripts/pep8.git bundle/pep8
 git submodule add https://github.com/alfredodeza/pytest.vim.git bundle/py.test
 git submodule add https://github.com/reinh/vim-makegreen bundle/makegreen
 git submodule add https://github.com/vim-scripts/TaskList.vim.git bundle/tasklist
-#git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtree
+git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtree
 #git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
 #git submodule add https://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter 
 git submodule add https://github.com/tomtom/tcomment_vim.git bundle/tcomment

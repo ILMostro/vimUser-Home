@@ -2,7 +2,7 @@
 
 execute
 
-```
+```bash
     git clone https://github.com/ILMostro/vimUser-Home.git
     cd vimUser-Home/
     ./addplugins.sh
