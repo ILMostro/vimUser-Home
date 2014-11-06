@@ -16,7 +16,9 @@ git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
 git submodule add https://github.com/fholgado/minibufexpl.vim.git bundle/minibufexpl
 git submodule add https://github.com/wincent/Command-T.git bundle/command-t
-git submodule add https://github.com/mitechie/pyflakes-pathogen.git
+# git submodule add https://github.com/mitechie/pyflakes-pathogen.git
+git submodule add https://github.com/tpope/vim-pathogen.git
+git submodule add https://github.com/tpope/vim-markdown.git bundle/markdown
 git submodule add https://github.com/mileszs/ack.vim.git bundle/ack
 git submodule add https://github.com/sjl/gundo.vim.git bundle/gundo
 git submodule add https://github.com/fs111/pydoc.vim.git bundle/pydoc
