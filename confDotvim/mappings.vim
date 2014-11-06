@@ -116,13 +116,13 @@ map <C-left> <ESC>:bp<CR>
 " map <F7> :exe ":sign place 123 line=" . line(".") ."name=information file=" . expand("%:p")<CR>
 "}}}
 
-" Mapping 'Ctrl-k' to jump between placeholders in '.tpl' files (templates)
-" nnoremap <c-k> /<+.\{-1,}+><cr>c/+>/e<cr>
-" inoremap <c-k> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+" Mapping 'Ctrl-i' to jump between placeholders in '.tpl' files (templates)
+" nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr>
+" inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
 " do mapping as above only in certain filetype (.tpl template)
-au FileType html,java nnoremap <c-k> /<+.\{-1,}+><cr>c/+>/e<cr> 
-au FileType html,java inoremap <c-k> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
-" au FileType html map <c-k> /<+.\{-1,}+><cr>c/+>/e<cr> 
+au FileType html,java nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
+au FileType html,java inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
+" au FileType html map <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
 
 inoremap jj <Esc>
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
@@ -132,4 +132,14 @@ hi CursorLine term=bold cterm=bold ctermbg=Cyan
 nnoremap <Leader>c :set cursorline!<CR>
 " Pressing SPACE clears search highlighting and any message already displayed
 
+" Toggle MiniBuffer tab bar visibility
+map <F4> :TMiniBufExplorer<cr>
+" Mappings to access buffers
+nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>g :e#<CR>
+
+" Insert singlequotes from current position to end of line
+map <Leader>' Wgewi'<Esc>A'<Esc>w
 
