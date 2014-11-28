@@ -43,8 +43,8 @@ imap <C-W> <C-O><C-W>
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-map <leader>f :CtrlP<CR>
-map <leader>b :CtrlPBuffer<CR>
+" map <leader>f :CtrlP<CR>
+" map <leader>b :CtrlPBuffer<CR>
 
 " Ack searching
 nmap <leader>a <Esc>:Ack!
@@ -104,8 +104,8 @@ nmap <buffer> <CR> <C-]>
 nmap <buffer> <BS> <C-T>
 
 " Switch buffers with Ctrl-left/right
-map <C-right> <ESC>:bn<CR>
-map <C-left> <ESC>:bp<CR>
+map <leader><Right> <ESC>:bn<CR>
+map <leader><Left> <ESC>:bp<CR>
 "}}}
 " Define a 'sign' and map it to F7 shortcut key"{{{
 "   NOT implemented correctly as is-----------
@@ -142,4 +142,7 @@ nnoremap <Leader>g :e#<CR>
 
 " Insert singlequotes from current position to end of line
 map <Leader>' Wgewi'<Esc>A'<Esc>w
+
+" toggle 'paste' mode
+set pastetoggle=<F4>
 
