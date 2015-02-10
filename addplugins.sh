@@ -30,6 +30,9 @@ git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtr
 #git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
 #git submodule add https://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter 
 git submodule add https://github.com/tomtom/tcomment_vim.git bundle/tcomment
+## ------------------------
+## additional plugins
+git submodule add https://github.com/kien/ctrlp.vim.git bundle/ctrlp
 git submodule init
 git submodule update
 git submodule foreach git submodule init
