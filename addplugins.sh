@@ -10,7 +10,7 @@ fi
 ## -----------------------------------------------
 git clone https://github.com/tpope/vim-pathogen.git
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
-#git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
+git submodule add https://github.com/ervandew/snipmate.vim bundle/snipmate
 git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/tpope/vim-git.git bundle/git
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
