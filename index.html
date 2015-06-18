@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Vimuser-home by ILMostro</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Vimuser-home</h1>
+        <h2>VIM/Vi config options housed under /home/user/.vim/</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/ILMostro/vimUser-Home/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/ILMostro/vimUser-Home/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ILMostro/vimUser-Home" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a id="vim-users-configuration-scripts" class="anchor" href="#vim-users-configuration-scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vim Users' Configuration Scripts</h3>
+
+<p>execute</p>
+
+<div class="highlight highlight-bash"><pre>    git clone https://github.com/ILMostro/vimUser-Home.git
+    <span class="pl-c1">cd</span> vimUser-Home/
+    ./addplugins.sh</pre></div>
+
+<p>to download this repo into the current directory; by executing
+the <code>addplugins.sh</code> script, </p>
+
+<ul>
+<li>the <code>vimUser-Home</code> folder is populated with the <code>pathogen</code> plugin for <code>vim</code>, </li>
+<li>the <code>bundle</code> directory is created, </li>
+<li>and the list of chosen vim-plugins are initialized as submodules in the <code>bundle</code> directory.</li>
+</ul>
+
+<h1>
+<a id="vimuser-home" class="anchor" href="#vimuser-home" aria-hidden="true"><span class="octicon octicon-link"></span></a>vimUser-Home</h1>
+
+<p>This repo holds various snippets, templates, and other configuration options
+for VIM-7.2+, which I prefer to keep in the user's home directory under
+  <code>/home/user/.vim/</code>
+I'd like to point out that this README file has become a Notepad of
+sorts to mark, copy, paraphrase, and expand on the bits and pieces
+of particular interest from the book
+<a href="http://www.packtpub.com/hacking-vim-cookbook-get-most-out-latest-vim-editor/book">Hacking Vim</a>
+by Kim Schulz. It's the best source of
+valuable advice in a concise and functional writing style.
+Though, it's not the only source of information upon which this
+site is based, it <em>is</em> the most useful to me; both in its scope
+about the seemingly limitless power of vim as well as in its
+functional writing style, which tames vim long enough for the reader
+to understand it and, perhaps, adapt it to his/her own workflow.</p>
+
+<h2>
+<a id="templates" class="anchor" href="#templates" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Templates</strong>
+</h2>
+
+<p>The [templates folder] holds language-specific template files which all
+have the ".tpl" file extension. Their contents are inserted into a
+newly-created page with the various language-specific file extensions,
+i.e. <code>html.tpl</code>, <code>java.tpl</code>, <code>c.tpl</code>, etc.
+Meaning, when you create a new file, e.g. index.html, VIM will use
+the template named html.tpl (whatever you decide to include in it) to fill in
+the skeleton of the new file you'll want to create.  <strong>VIM only does this
+with newly-created files, not with existing files</strong> which already contain
+their own lines of code/text.
+You are free to create templates for any programming language as long
+as they adhere to the above-mentioned naming standards.
+<em>IMPORTANT:</em>
+Those "templates" need to be sourced in user's <code>.vimrc</code> file like so:</p>
+
+<pre><code>autocmd BufNewFile * silent! 0r $HOME/.vim/templates/%:e.tpl
+</code></pre>
+
+<p>Further options include creating <em>placeholders</em> and mapping
+a shortcut key to jump between them as you insert the text.
+For example, in the HTML template:</p>
+
+<pre><code>&lt;title&gt;&lt;+INSERT TITLE+&gt;&lt;/title&gt;
+</code></pre>
+
+<p>The following key-mapping binds <code>Ctrl-k</code> to jump between the
+placeholders enclosed with the <code>&lt;+ +&gt;</code> tags.</p>
+
+<pre><code>au FileType html nnoremap &lt;c-k&gt; /&lt;+.\{-1,}+&gt;&lt;cr&gt;c/+&gt;/e&lt;cr&gt;
+</code></pre>
+
+<p>This will ensure that the mapping works in INSERT mode as well:</p>
+
+<pre><code>au FileType html inoremap &lt;c-k&gt; &lt;ESC&gt;/&lt;+.\{-1,}+&gt;&lt;cr&gt;c/+&gt;/e&lt;cr&gt;
+</code></pre>
+
+<p>Alternatively, you can leave out the <code>au FileType html</code> part of the
+keymapping to apply it to all filetypes (as long as you put placeholders
+between <code>&lt;+ +&gt;</code> tags); or, you can just append more filetypes in a
+comma-separated list: <code>html,java,c</code>,...etc.</p>
+
+<p>-<em>Abbreviations as Templates</em>-
+In order to expedite the workflow when coding, we can use the Abbreviations
+method to, essentially create templates on a smaller scale: i.e. by creating
+a <code>html.patterns.tpl</code> file in our [templates] directory, we can for patterns
+instead of just for FileTypes.</p>
+
+<h2>
+<a id="key-mapping" class="anchor" href="#key-mapping" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Key-mapping</strong>
+</h2>
+
+<p>Furthermore, the shortcut key-mappings are all stored in the confDotvim/mappings.vim file.
+Once again, they are sourced in the '.vimrc' file as such:</p>
+
+<pre><code>`source /home/user/.vim/confDotvim/mappings.vim`
+</code></pre>
+
+<p>Also, the abbreviations.vim file holds, tadaa! abbreviations, what else.
+Set them in INSERT-mode (<code>iabbr</code>) commandline-mode (<code>cabbr</code>)
+  Find more info about abbreviations in VIM at the following link
+  as well as the other listed links at the bottom of that page:
+  <a href="http://vim.wikia.com/wiki/Using_abbreviations">http://vim.wikia.com/wiki/Using_abbreviations</a></p>
+
+<h2>
+<a id="install-plugins-script" class="anchor" href="#install-plugins-script" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<strong><em>install-plugins</em></strong> <strong>Script</strong>
+</h2>
+
+<p>Lastly, the addplugins.sh file is a copied/customized/edited version of
+one included in <a href="https://github.com/sontek/dotfiles">sontek's github/dotfiles repo</a> .
+It's also referenced in his
+<a href="http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide">tutorial</a>
+on using VIM for coding in Python.</p>
+
+<p>MORE TO COME...</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
