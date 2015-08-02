@@ -5,6 +5,13 @@ if
   exec mkdir -p $HOME/.vim/bundle
 fi
 
+if
+  [ ! -d .git ]; then
+  exec git init
+fi
+
+sleep 1
+
 ## git submodule update --init --recursive
 ## git submodule foreach --recursive git pull origin master
 ## -----------------------------------------------
