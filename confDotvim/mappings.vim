@@ -133,7 +133,8 @@ nnoremap <Leader>c :set cursorline!<CR>
 " Pressing SPACE clears search highlighting and any message already displayed
 
 " Toggle MiniBuffer tab bar visibility
-map <F4> :TMiniBufExplorer<cr>
+" map <F3> :TMiniBufExplorer<cr>
+map <F3> :MBEToggle<cr>
 " Mappings to access buffers
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
