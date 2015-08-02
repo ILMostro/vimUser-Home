@@ -227,6 +227,9 @@ au BufNewFile,BufRead *.log setf sh
 " Amel---Display 'sh' syntax-highlighting for '*.rpmmacros' file
 au BufNewFile,BufRead *.rpmmacros setf sh
 
+" au BufNewFile,BufRead *.java 6put %
+au FileType *.java 6put %
+
 " Python"{{{
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -260,3 +263,6 @@ endif
 "source $HOME/.vim/confDotvim/wrapping.vim
 source $HOME/.vim/abbreviations.vim
 set nu
+
+" detect new java files and append FILENAME as java ClassName
+au BufNewFile,BufRead *.java :5r! echo "public class %"
