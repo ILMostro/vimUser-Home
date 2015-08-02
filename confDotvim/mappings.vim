@@ -124,6 +124,9 @@ au FileType html,java nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr>
 au FileType html,java inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
 " au FileType html map <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
 
+" Set filetype based on directory
+au BufNewFile,BufRead /etc/* set syntax=conf
+
 inoremap jj <Esc>
 " Highlight the current line
 hi CursorLine term=bold cterm=bold ctermbg=Cyan
