@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 if
-  [ ! -d $1 ]; then
-  exec mkdir -p $HOME/.vim/bundle
+  [ !-d $1 ];
+then
+  mkdir -p $HOME/.vim/bundle
 fi
 
 ## git submodule update --init --recursive
@@ -11,6 +12,7 @@ fi
 git clone https://github.com/tpope/vim-pathogen.git
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 #git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
+git submodule add https://github.com/SirVer/ultisnips.git bundle/ultisnips
 git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/tpope/vim-git.git bundle/git
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
@@ -45,4 +47,8 @@ if
   [ ! -d ./autoload ]; then
   exec mv ./vim-pathogen/autoload .
 fi
+
+# test for Error codes
+if (( $? )) ; then echo failed ; else echo OK; fi
+
 exit 
