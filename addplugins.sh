@@ -59,9 +59,9 @@ call pathogen#infect()
 call pathogen#helptags()"
 
 if
-  [ !-d ./autoload ];
+  [ !-d autoload ];
 then
-  exec mv ./vim-pathogen/autoload .
+  mv ./vim-pathogen/autoload .
 fi
 
 # test for Error codes
