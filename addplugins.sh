@@ -3,16 +3,29 @@
 if
   [ !-d $1 ];
 then
-  mkdir -p $HOME/.vim/bundle
+  mkdir $HOME/.vim
 fi
+
+cp .vimrc $HOME/
+cp -r confDotvim templates abbreviations.vim $HOME/.vim/
+
+cd $HOME/.vim
 
 if
-  [ !-d .git ];
+  [ !-d $1 ];
 then
-  exec git init
+  mkdir $HOME/.vim/bundle
 fi
 
-sleep 10
+git init
+
+#if
+#  [ !-d .git ];
+#then
+#  exec git init
+#fi
+
+sleep 3
 
 ## git submodule update --init --recursive
 ## git submodule foreach --recursive git pull origin master
@@ -58,11 +71,13 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()"
 
-if
-  [ !-d autoload ];
-then
-  mv ./vim-pathogen/autoload .
-fi
+mv ./vim-pathogen/autoload .
+
+#if
+#  [ !-d autoload ];
+#then
+#  mv ./vim-pathogen/autoload .
+#fi
 
 # test for Error codes
 if (( $? )) ; then echo failed ; else echo OK; fi
