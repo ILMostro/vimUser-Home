@@ -1,23 +1,43 @@
 #!/usr/bin/env bash
 
 if
-  [ ! -d $1 ]; then
-  exec mkdir -p $HOME/.vim/bundle
+  [ !-d $1 ];
+then
+  mkdir $HOME/.vim
 fi
+
+cp .vimrc $HOME/
+cp -r confDotvim templates abbreviations.vim $HOME/.vim/
+
+cd $HOME/.vim
 
 if
-  [ ! -d .git ]; then
-  exec git init
+  [ !-d $1 ];
+then
+  mkdir $HOME/.vim/bundle
 fi
 
-sleep 1
+git init
+
+#if
+#  [ !-d .git ];
+#then
+#  exec git init
+#fi
+
+sleep 3
 
 ## git submodule update --init --recursive
 ## git submodule foreach --recursive git pull origin master
 ## -----------------------------------------------
 git clone https://github.com/tpope/vim-pathogen.git
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+# <<<<<<< HEAD
+#git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
+git submodule add https://github.com/SirVer/ultisnips.git bundle/ultisnips
+# =======
 git submodule add https://github.com/ervandew/snipmate.vim bundle/snipmate
+# >>>>>>> 6ece03014367bcaf041295419232e53048db94f7
 git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/tpope/vim-git.git bundle/git
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
@@ -44,15 +64,22 @@ git submodule init
 git submodule update
 git submodule foreach git submodule init
 git submodule foreach git submodule update
-sleep 1   
+sleep 10
 echo "don't forget to add this to your ~/.vimrc file
 the first time, to initialize 'pathogen':
 filetype off
 call pathogen#infect()
 call pathogen#helptags()"
 
-if
-  [ ! -d ./autoload ]; then
-  exec mv ./vim-pathogen/autoload .
-fi
+mv ./vim-pathogen/autoload .
+
+#if
+#  [ !-d autoload ];
+#then
+#  mv ./vim-pathogen/autoload .
+#fi
+
+# test for Error codes
+if (( $? )) ; then echo failed ; else echo OK; fi
+
 exit 
