@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
 if
+  [ !-f $1 ];
+then
+  cp -r .vimrc ~/.vimrc
+# else
+  # cp -r ~/.vimrc{,.bak} && cp -r .vimrc ~/.vimrc
+  # mv ~/.vimrc{,.bak}
+  # cp -r .vimrc ~/.vimrc
+fi
+
+if
   [ !-d $1 ];
 then
   mkdir $HOME/.vim
