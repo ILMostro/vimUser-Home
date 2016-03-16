@@ -4,12 +4,12 @@
 # <+Heading+>
 ############################################################################
 
-USAGE="Usage: `basename $0` <+parameter+>
+USAGE="Usage: `basename $0` <+parameter+>"
 
-
-
-
-
-
+if [[ -z $1 ]]
+then
+  echo $USAGE
+fi
 
 exit
+
