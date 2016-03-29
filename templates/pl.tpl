@@ -2,7 +2,7 @@
 # Comments follow
 use strict;
 use warnings;
-use IO:File;
+use IO::File;
 
 main(@ARGV);
 
