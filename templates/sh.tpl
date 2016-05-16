@@ -15,5 +15,7 @@ then
   exit 1
 fi
 
-exit
+# test for Error codes
+if (( $? )); then echo failed; else echo OK; fi
 
+exit
