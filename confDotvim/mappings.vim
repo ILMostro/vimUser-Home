@@ -134,16 +134,20 @@ au FileType html,java nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr>
 au FileType html,java inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
 " au FileType html map <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
 
+" Set filetype based on directory
+au BufNewFile,BufRead /etc/* set syntax=conf
+
 inoremap jj <Esc>
-nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 " Highlight the current line
 hi CursorLine term=bold cterm=bold ctermbg=Cyan
 " Toggle highlighting on/off with \c
 nnoremap <Leader>c :set cursorline!<CR>
 " Pressing SPACE clears search highlighting and any message already displayed
+nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 " Toggle MiniBuffer tab bar visibility
-map <F4> :TMiniBufExplorer<cr>
+" map <F3> :TMiniBufExplorer<cr>
+map <F3> :MBEToggle<cr>
 " Mappings to access buffers
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
