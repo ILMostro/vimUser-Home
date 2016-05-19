@@ -72,8 +72,18 @@ nnoremap <leader>. :lcd %:p:h<CR>
 " don't outdent hashes
 inoremap # #
 
-" Paste from clipboard
-map <leader>p "+p
+
+
+" CLIPBOARD see the following link for further info
+" http://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim?lq=1
+" Use PRIMARY clipboard (*) with 'y' and 'p'
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+" Use 'regular' CLIPBOARD with 'y' and 'p'
+noremap <Leader>Y "+y
+noremap <Leader>P "+P
+
+
 
 " Quit window on <leader>q
 nnoremap <leader>q :q<CR>
