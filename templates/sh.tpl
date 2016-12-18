@@ -20,6 +20,8 @@ fi
 
 <+VARS+>
 
+printf "\v\v <+OUTPUT+> \n"
+
 # test for Error codes
 if (( $? )); then echo -e "\v\vfailed"; else echo -e "\v\vOK"; fi
 
