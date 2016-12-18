@@ -21,6 +21,6 @@ fi
 <+VARS+>
 
 # test for Error codes
-if (( $? )); then echo failed; else echo OK; fi
+if (( $? )); then echo -e "\v\vfailed"; else echo -e "\v\vOK"; fi
 
 exit
