@@ -120,7 +120,7 @@ set pumheight=6             " Keep a small completion window
 
 
 """ Moving Around/Editing"{{{
-" set cursorline              " have a line indicate the cursor location
+set cursorline              " have a line indicate the cursor location
                             " this is already set in /etc/vimrc
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
