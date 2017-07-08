@@ -127,11 +127,11 @@ map <leader><Left> <ESC>:bp<CR>
 "}}}
 
 " Mapping 'Ctrl-i' to jump between placeholders in '.tpl' files (templates)
-" nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr>
-" inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
+nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr>
+inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr>
 " do mapping as above only in certain filetype (.tpl template)
-au FileType html,java nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
-au FileType html,java inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
+" au FileType html,java nnoremap <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
+" au FileType html,java inoremap <c-i> <ESC>/<+.\{-1,}+><cr>c/+>/e<cr> 
 " au FileType html map <c-i> /<+.\{-1,}+><cr>c/+>/e<cr> 
 
 " Set filetype based on directory
