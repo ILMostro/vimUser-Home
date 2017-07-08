@@ -42,12 +42,8 @@ sleep 3
 ## -----------------------------------------------
 git clone https://github.com/tpope/vim-pathogen.git
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
-# <<<<<<< HEAD
 #git submodule add https://github.com/msanders/snipmate.vim.git bundle/snipmate
 git submodule add https://github.com/SirVer/ultisnips.git bundle/ultisnips
-# =======
-git submodule add https://github.com/ervandew/snipmate.vim bundle/snipmate
-# >>>>>>> 6ece03014367bcaf041295419232e53048db94f7
 git submodule add https://github.com/tpope/vim-surround.git bundle/surround
 #git submodule add https://github.com/tpope/vim-git.git bundle/git
 #git submodule add https://github.com/ervandew/supertab.git bundle/supertab
@@ -67,6 +63,7 @@ git submodule add https://github.com/vim-scripts/The-NERD-tree.git bundle/nerdtr
 #git submodule add https://github.com/sontek/rope-vim.git bundle/ropevim
 #git submodule add https://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter 
 git submodule add https://github.com/tomtom/tcomment_vim.git bundle/tcomment
+git submodule add https://github.com/godlygeek/tabular bundle/tabular
 ## ------------------------
 ## additional plugins
 git submodule add https://github.com/kien/ctrlp.vim.git bundle/ctrlp
