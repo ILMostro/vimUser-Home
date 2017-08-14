@@ -17,7 +17,7 @@ then
 fi
 
 cp .vimrc $HOME/
-cp -r confDotvim templates abbreviations.vim $HOME/.vim/
+cp -r confDotvim templates $HOME/.vim/
 
 cd $HOME/.vim
 

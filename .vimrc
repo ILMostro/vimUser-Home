@@ -79,6 +79,8 @@ source $HOME/.vim/confDotvim/mappings.vim
 " ==========================================================
 " Load pathogen with docs for all plugins
 filetype off
+" source file with list of disabled plugins
+source $HOME/.vim/confDotvim/disable-plugin.vim
 call pathogen#infect()
 "call pathogen#incubate()
 call pathogen#helptags()
@@ -261,7 +263,7 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 "source $HOME/.vim/confDotvim/wrapping.vim
-source $HOME/.vim/abbreviations.vim
+source $HOME/.vim/confDotvim/abbreviations.vim
 set nu
 
 " detect new java files and append FILENAME as java ClassName
