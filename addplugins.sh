@@ -17,7 +17,7 @@ then
 fi
 
 cp .vimrc $HOME/
-cp -r confDotvim templates $HOME/.vim/
+cp -r confDotvim templates UltiSnips $HOME/.vim/
 
 cd $HOME/.vim
 
