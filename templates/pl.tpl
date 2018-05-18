@@ -2,7 +2,8 @@
 # Comments follow
 use strict;
 use warnings;
-use IO::File;
+#use IO::File;
+#use feature ':5.10';
 
 main(@ARGV);
 
